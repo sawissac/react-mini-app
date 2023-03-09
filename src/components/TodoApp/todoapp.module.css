@@ -1,0 +1,201 @@
+.todo-app-container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  transition: background-color;
+  transition-duration: 0.3s;
+}
+.todo-app-container--dark {
+  background-color: #181818;
+}
+.todo-app-container--dark .todo-app__title div:nth-child(1) {
+  color: #ffffff;
+  background-color: #4f4ff8;
+}
+.todo-app-container--dark .todo-app__title h1 {
+  color: #ffffff;
+}
+.todo-app-container--dark .todo-app__title button {
+  background-color: #181818;
+  color: #ffff00;
+}
+.todo-app-container--dark .todo-app__search input {
+  color: #ffffff;
+  background-color: #181818;
+  border: 1px solid #4f4ff8;
+  outline: none;
+}
+.todo-app-container--dark .todo-app__control button {
+  background-color: #181818;
+  color: #4f4ff8;
+}
+.todo-app-container--dark .todo-app__control button:hover {
+  background-color: rgba(0, 42, 255, 0.1);
+}
+.todo-app-container--dark .todo-app__control button:focus-within {
+  background-color: rgba(0, 42, 255, 0.1);
+}
+.todo-app-container--dark .todo-app__list {
+  background-color: #181818;
+  color: #808080;
+  border: 1px solid #181818;
+  border-left: 3px solid #808080;
+}
+.todo-app-container--dark .todo-app__list--selected {
+  color: #ffffff;
+  border-left: 3px solid #4f4ff8;
+}
+.todo-app-container--dark .todo-app__list--selected::before {
+  content: "";
+  background-color: #4f4ff8;
+}
+.todo-app-container--dark .todo-app__list--default p, .todo-app-container--dark .todo-app__list--default i {
+  color: #808080;
+}
+.todo-app-container--dark .todo-app__list:focus-within {
+  background-color: rgba(0, 42, 255, 0.1);
+}
+.todo-app-container--dark .todo-app__footer p {
+  color: #ffffff;
+}
+.todo-app-container--dark .todo-app__footer button {
+  color: #4f4ff8;
+  background-color: #181818;
+}
+.todo-app {
+  margin: 0 auto;
+  padding: 20px 30px;
+  max-width: 400px;
+}
+.todo-app__title {
+  display: flex;
+  align-items: center;
+}
+.todo-app__title div:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #eb3d3d;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+.todo-app__title h1 {
+  text-transform: uppercase;
+}
+.todo-app__title button {
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  color: #808080;
+  cursor: pointer;
+}
+.todo-app__title button i {
+  font-size: 24px;
+}
+.todo-app__search input {
+  width: 100%;
+  border-radius: 7px;
+  padding: 10px 7px;
+  margin-top: 20px;
+  border: 1px solid #ededed;
+}
+.todo-app__search input:focus-within {
+  outline-color: #eb3d3d;
+}
+.todo-app__control {
+  display: flex;
+}
+.todo-app__control button {
+  background-color: white;
+  outline: none;
+  border: none;
+  color: #eb3d3d;
+  border-radius: 2px;
+  padding: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+.todo-app__control button:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.todo-app__control button:focus-within {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.todo-app__control i {
+  margin-right: 5px;
+}
+.todo-app__lists-view {
+  margin: 20px 0px;
+}
+.todo-app__list {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: #808080;
+  border: none;
+  width: 100%;
+  border: 1px solid #ededed;
+  border-left: 3px solid #ededed;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+.todo-app__list i {
+  margin-right: 20px;
+  font-size: 24px;
+}
+.todo-app__list p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.todo-app__list--selected {
+  color: #181818;
+  border-left: 3px solid #eb3d3d;
+}
+.todo-app__list--marked {
+  text-decoration: line-through;
+}
+.todo-app__list--selected::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  left: -6.5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  background-color: #eb3d3d;
+}
+.todo-app__list--default p, .todo-app__list--default i {
+  margin: 0;
+  margin-right: 5px;
+  color: #808080;
+  font-size: 14px;
+}
+.todo-app__list:focus-within {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.todo-app__footer {
+  display: flex;
+}
+.todo-app__footer p {
+  font-size: 14px;
+}
+.todo-app__footer button {
+  color: #eb3d3d;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.todo-app__footer button:focus-within {
+  text-decoration: underline;
+}
