@@ -13,7 +13,7 @@ type ListData = {
   mark: boolean;
 };
 
-function TodoApp() {
+const TodoApp: React.FC<{}> = () => {
   const initState = [
     { id: 0, desc: "Meet with Mom", mark: true },
     { id: 1, desc: "Eat dinner", mark: false },
@@ -171,6 +171,6 @@ function TodoApp() {
       </div>
     </div>
   );
-}
+};
 
 export default TodoApp;

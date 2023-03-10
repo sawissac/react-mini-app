@@ -18,4 +18,4 @@ Click a list & click delete.
 
 ## How to update a todo list
 
-click search & Write a word that you want to change search, if u are done click undo.
+Click search & Write a word that you want to change search, if u are done click undo.
