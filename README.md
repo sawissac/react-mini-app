@@ -16,6 +16,6 @@ Click a list & write a word that you want to change and click rewrite.
 
 Click a list & click delete.
 
-## How to update a todo list
+## How to Search a todo list
 
-Click search & Write a word that you want to change search, if u are done click undo.
+Click search & Write a word that you want to search, if u are done click undo.

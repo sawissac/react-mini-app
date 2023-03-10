@@ -32,7 +32,7 @@ const TodoListView: React.FC<Props> = ({
       <ShowIf sif={data.length === 0} show={<DefaultList />} />
       {data.map((i, index) => {
         const isSearchActive = isSearchEnable
-          ? i.desc.includes(searchInput) && i.id === activeId
+          ? i.desc.toLowerCase().includes(searchInput.toLowerCase()) && i.id === activeId
           : i.id === activeId;
         if (isSearchActive) {
           let classNameList = i.mark
@@ -50,7 +50,7 @@ const TodoListView: React.FC<Props> = ({
           );
         }
         const isSearchNonActive = isSearchEnable
-          ? i.desc.includes(searchInput) && i.id !== activeId
+          ? i.desc.toLowerCase().includes(searchInput.toLowerCase()) && i.id !== activeId
           : i.id !== activeId;
         if (isSearchNonActive) {
           let classNameList = i.mark
