@@ -14,13 +14,17 @@ type ListData = {
 };
 
 function TodoApp() {
-  const [id, setId] = React.useState<number>(0);
+  const initState = [
+    { id: 0, desc: "Meet with Mom", mark: true },
+    { id: 1, desc: "Eat dinner", mark: false },
+    { id: 2, desc: "Go Home", mark: false },
+  ];
+  const [id, setId] = React.useState<number>(3);
   const [searchInput, setSearchInput] = React.useState<string>("");
   const [searchEnable, setSearchEnable] = React.useState<boolean>(false);
-  const [todoList, setTodoList] = React.useState<Array<ListData>>([]);
+  const [todoList, setTodoList] = React.useState<Array<ListData>>(initState);
   const [activeId, setActiveId] = React.useState<number>(-1);
   const [darkMode, setDarkMode] = React.useState<boolean>(false);
-
   const marks = todoList.filter((i) => i.mark === true);
 
   const createList = (desc?: string) => {
@@ -55,21 +59,21 @@ function TodoApp() {
   };
   const handleRewriteClick = () => {
     if (activeId >= 0 && searchInput) {
-      let newList = todoList.map((i) => {
+      let updatedList = todoList.map((i) => {
         if (i.id === activeId) {
           return { ...i, desc: searchInput };
         } else {
           return i;
         }
       });
-      setTodoList(newList);
+      setTodoList(updatedList);
       setSearchInput("");
     }
   };
   const handleDeleteClick = () => {
     if (activeId >= 0) {
-      let newList = todoList.filter((i) => i.id !== activeId);
-      setTodoList(newList);
+      let updatedList = todoList.filter((i) => i.id !== activeId);
+      setTodoList(updatedList);
       setActiveId(-1);
     }
   };
@@ -77,10 +81,10 @@ function TodoApp() {
     createList("This is a demo list!");
   };
   const handleCheckAll = () => {
-    let newList = todoList.map((i) => {
+    let updatedList = todoList.map((i) => {
       return { ...i, mark: true };
     });
-    setTodoList(newList);
+    setTodoList(updatedList);
   };
   const handleDeleteAll = () => {
     setTodoList([]);
