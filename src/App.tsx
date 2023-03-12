@@ -1,10 +1,14 @@
 import "./App.css";
-import TodoApp from "./components/TodoApp";
+import ReactQuery from "./components/ReactQuery";
+import { QueryClient, QueryClientProvider } from "react-query";
 
+const queryClient = new QueryClient();
 function App() {
   return (
     <div className="App">
-      <TodoApp />
+      <QueryClientProvider client={queryClient}>
+        <ReactQuery />
+      </QueryClientProvider>
     </div>
   );
 }
