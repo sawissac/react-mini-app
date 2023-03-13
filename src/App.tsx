@@ -1,13 +1,17 @@
 import "./App.css";
-import ReactQuery from "./components/ReactQuery";
+import Stwapi from "./components/ReactQueryReduxRouter";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter, Navigate } from "react-router-dom";
 
 const queryClient = new QueryClient();
+
 function App() {
   return (
     <div className="App">
       <QueryClientProvider client={queryClient}>
-        <ReactQuery />
+        <BrowserRouter>
+          <Stwapi />
+        </BrowserRouter>
       </QueryClientProvider>
     </div>
   );

@@ -1,0 +1,118 @@
+@use "sass:color" as color;
+
+$white: #ffffff;
+$dark: #000000;
+$grey: grey;
+$yellow: yellow;
+
+.ui-navbar {
+  border-right: 3px solid $yellow;
+  box-shadow: 3px 0px 0px 0px color.adjust($yellow, $alpha: -0.8), 6px 0px 0px 0px color.adjust($yellow, $alpha: -0.8);
+  padding: 20px 0px;
+  width: 300px;
+  height: 100vh;
+  z-index: 999;
+  background-color: $dark;
+  &__title {
+    margin-bottom: 20px;
+    h1 {
+      color: $yellow;
+      padding-left: 20px;
+    }
+  }
+  &__link-list {
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: $yellow;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .link--active {
+      color: $dark !important;
+      background-color: $yellow !important;
+    }
+  }
+}
+
+.ui-display {
+  width: 100%;
+  background-image: url("https://th.bing.com/th/id/R.215e86d9d178dcfb78898ae2f8d65eaa?rik=sKE%2bgP0XNGlGRw&riu=http%3a%2f%2fwww.hdwallpaper.nu%2fwp-content%2fuploads%2f2015%2f02%2fjokl.jpg&ehk=7r7VgxeqZhxopZPnOdmQUtGNdTQoo1UqxDFqtX7lseM%3d&risl=&pid=ImgRaw&r=0");
+  background-position: center;
+  background-size: cover;
+}
+
+.ui-usage {
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 20px 40px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    86deg,
+    rgba(0, 0, 0, 1) 29%,
+    rgba(3, 3, 3, 0.4587898147540266) 79%,
+    rgba(7, 7, 7, 0) 100%
+  );
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0px;
+    text-decoration: underline;
+    color: $yellow;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  h1 {
+    color: $yellow;
+    text-transform: uppercase;
+  }
+  p {
+    color: $white;
+  }
+
+  input {
+    padding: 10px 10px;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 7px;
+    margin-right: 7px;
+  }
+
+  button {
+    background-color: $yellow;
+    color: $dark;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 10px;
+    outline-color: transparent;
+    border: none;
+    border-radius: 7px;
+
+    &:hover {
+      background-color: adjust-color($yellow, $alpha: -0.2);
+    }
+  }
+}
+
+.data-table {
+  margin: 20px 0;
+  td,
+  tr,
+  th {
+    border-style: double;
+    border: 1px solid $yellow;
+    color: white;
+  }
+
+  th,
+  td {
+    width: 250px;
+    padding: 10px 10px;
+  }
+}
