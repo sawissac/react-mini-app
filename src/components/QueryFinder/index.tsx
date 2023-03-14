@@ -39,7 +39,7 @@ const QueryFinder = () => {
             }
           }}
           type="text"
-          name="target"
+          name="targets"
           id="target-query"
         />
       </div>
